@@ -1,5 +1,8 @@
 import React from "react";
 import "./footer.css"
+import Logo from "../assets/Zuri-logo.png";
+import I4G from "../assets/I4G.png";
+
 
 export default function Footer(){
   return(
@@ -11,9 +14,9 @@ export default function Footer(){
      </div>
 
      <div className="footer-bottom">
-         <img src="../src/assets/Zuri-Logo.png"/>
+         <img src={Logo}/>
          <p>HNG Internship 9 Frontend Task</p>
-         <img src="../src/assets/I4G.png"/>
+         <img src={I4G}/>
      </div>
   </div>)
 }

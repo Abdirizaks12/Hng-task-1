@@ -9,8 +9,8 @@
  padding: 24px 0px;
 gap: 24px;
 
-/* width: 375px;
-height: 72px; */
+width: 330px;
+height: 72px;
 
 /* Base/White */
 
@@ -19,7 +19,6 @@ background: #FFFFFF;
 /* Inside auto layout */
 
 
-flex-grow: 1;
 }
 .footer-top>a{
     width: 24px;

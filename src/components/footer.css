@@ -1,5 +1,6 @@
 .footer{
       padding-bottom: 40px;
+     
 }
 
 .footer-top{
@@ -8,8 +9,8 @@
  padding: 24px 0px;
 gap: 24px;
 
-width: 375px;
-height: 72px;
+/* width: 375px;
+height: 72px; */
 
 /* Base/White */
 
@@ -40,9 +41,9 @@ flex-grow: 1;
     align-items: flex-start;
     padding: 32px 0px 0px;
     gap: 16px;
-    
-    width: 343px;
-    height: 132px;
+    margin: 0 auto;
+    /* width: 343px;
+    height: 132px; */
     
     /* Gray/200 */
     

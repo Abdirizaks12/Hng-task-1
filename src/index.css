@@ -2,12 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 64px 0px 0px 32px;
+    padding: 64px 0px 32px;
     gap: 24px;
-    margin: 0 auto;
-
-    width: 100%;
+    width: 375px;
     height: 100%;
+    margin: 0 auto;
 
     background: #FFFFFF;
 }
@@ -20,9 +19,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 64px 112px;
+      /* padding: 64px 112px; */
       gap: 32px;
-
+      margin: 0 auto;
 
     }
   }

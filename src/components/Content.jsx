@@ -37,7 +37,7 @@ export default function Content(){
    
     return(
       <div className="Main-content">
-       {data.map(item=>(<a href={item.link}key={item.id}>{item.name}</a>))}
+       {data.map(item=>(<a id={item.id} href={item.link} key={item.id}>{item.name}</a>))}
         </div>
     )
 }

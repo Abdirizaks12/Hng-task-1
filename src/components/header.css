@@ -9,7 +9,7 @@
 
 }
 
-#profile_img{
+#profile__img{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -83,6 +83,9 @@
         order: 0;
         flex-grow: 1;
 }
+.share-avatar:hover{
+        background-color: #dfe1e6; 
+}
 
 @media screen and (min-width:1440px){
         .header{
@@ -125,5 +128,10 @@
         .share-avatar{
                 background: url(../assets/avatar-share-button2.png);
                margin-right: 300px;
+               cursor: pointer;
+
+        }
+        .share-avatar:hover{
+                background-color: #dfe1e6; 
         }
 }

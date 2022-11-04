@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./content.css"
 export default function Content(){
   const data = [
@@ -31,7 +32,13 @@ export default function Content(){
       name:"Design Books",
       link:"https://books.zuri.team/design-rules" ,
       id:"book__design"
+    },
+    {
+      name:"Contact Me",
+      link:"./contact",
+      id:"contact"
     }
+    
       
 ]
    

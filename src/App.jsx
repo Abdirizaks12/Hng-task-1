@@ -1,17 +1,20 @@
 import React from "react";
-import Header from "./components/Header";
-import Content from "./components/Content"
-import Footer from "./components/Footer"
+import Home from "./components/Home"
+import Contact from "./components/contact"
+import {Routes , BrowserRouter, Route } from 'react-router-dom'
 
 
 export default function App(){
    
     return(
-      <div className="app">  
-        
-            <Header/>   
-            <Content/>
-            <Footer/>
+      <div className="app">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/contact" element={<Contact/>}/>
+            </Routes>
+          </BrowserRouter>
+       
        
       </div>
 

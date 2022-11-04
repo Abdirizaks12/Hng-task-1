@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom"
 import "./content.css"
 export default function Content(){
   const data = [
@@ -44,7 +44,7 @@ export default function Content(){
    
     return(
       <div className="Main-content">
-       {data.map(item=>(<a id={item.id} href={item.link} key={item.id}>{item.name}</a>))}
+       {data.map(item=>(<Link id={item.id} to={item.link} key={item.id}>{item.name}</Link>))}
         </div>
     )
 }

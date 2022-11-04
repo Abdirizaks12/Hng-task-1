@@ -6,7 +6,7 @@ export default function Contact(){
    const name = "Abdirizak";
    const [formData , setFormData] = React.useState({
     firstName: "",
-    secondName: "",
+    lastName: "",
     email: "",
     comments: "",
     shareData: false
@@ -38,10 +38,10 @@ export default function Contact(){
       const errors =  {};
       const regex = /(?:\W|^)(\Q$word\E)(?:\W|$)/i;
       if(!values.firstName){
-         errors.firstName ="Firstname is required"
+         errors.firstName ="First name is required"
       }
-      if(!values.secondName){
-         errors.secondName ="Secondname is required"
+      if(!values.lastName){
+         errors.lastName ="Last name is required"
       }
       if(!values.email){
          errors.email ="Email is required"
@@ -88,10 +88,10 @@ export default function Contact(){
                         type="text" 
                         placeholder="Enter your last name" 
                         onChange={handleChange} 
-                        name="secondName" 
-                        value={formData.secondName}
+                        name="lastName" 
+                        value={formData.lastName}
                         />
-                        <p className="error">{formErrors.secondName}</p>
+                        <p className="error">{formErrors.lastName}</p>
                      </div>
                      
                </div>

@@ -32,11 +32,6 @@ export default function Content(){
       name:"Design Books",
       link:"https://books.zuri.team/design-rules" ,
       id:"book__design"
-    },
-    {
-      name:"Contact Me",
-      link:"./contact",
-      id:"contact"
     }
     
       
@@ -44,7 +39,8 @@ export default function Content(){
    
     return(
       <div className="Main-content">
-       {data.map(item=>(<Link id={item.id} to={item.link} key={item.id}>{item.name}</Link>))}
+       {data.map(item=>(<a id={item.id} href={item.link} key={item.id}>{item.name}</a>))}
+       <Link id="contact" to="/contact" >Contact Me</Link>
         </div>
     )
 }

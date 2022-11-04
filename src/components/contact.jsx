@@ -11,6 +11,9 @@ export default function Contact(){
     comments: "",
     shareData: false
    })
+   const [formErrors , setFormErrors] = React.useState({})
+   const [isSubmit , setIsSubmit] = React.useState(false)
+
  function handleChange(event){
     const {name, value, type, checked} = event.target
     setFormData(prevState =>{ 
@@ -19,10 +22,37 @@ export default function Contact(){
             [name]: type === "checkbox" ? checked : value
         }})
  }
-    function handleSubmit(event){
-        // event.preventDefault()
-    }
+  React.useEffect(()=>{
+   if(Object.keys(formErrors).length === 0 && isSubmit){
+   return formData
+   }
+  },[formData])
 
+    function handleSubmit(event){
+        event.preventDefault()
+        setFormErrors(validate(formData))
+        setIsSubmit(true)
+    }
+    
+    const validate = (values) =>{ 
+      const errors =  {};
+      const regex = /(?:\W|^)(\Q$word\E)(?:\W|$)/i;
+      if(!values.firstName){
+         errors.firstName ="Firstname is required"
+      }
+      if(!values.secondName){
+         errors.secondName ="Secondname is required"
+      }
+      if(!values.email){
+         errors.email ="Email is required"
+      } else if (!regex.test(values.email)){
+         errors.email = "this is not a valid email format"
+      }
+      if(!values.message){
+         errors.message ="Message is required"
+      }
+      return errors;
+    }
 
     return(
       <div className="myContact">
@@ -47,6 +77,7 @@ export default function Contact(){
                         name="firstName" 
                         value={formData.firstName}
                         />
+                        <p className="error">{formErrors.firstName}</p>
                   </div>
       
                      <div>
@@ -60,6 +91,7 @@ export default function Contact(){
                         name="secondName" 
                         value={formData.secondName}
                         />
+                        <p className="error">{formErrors.secondName}</p>
                      </div>
                      
                </div>
@@ -76,6 +108,7 @@ export default function Contact(){
                    value={formData.email}
                    
                    />
+                   <p className="error">{formErrors.email}</p>
             </div>       
                 
             <div>
@@ -89,6 +122,7 @@ export default function Contact(){
                    value={formData.comments} 
                    
                    />
+                   <p className="error">{formErrors.message}</p>
             </div>
 
             <div className="checker">

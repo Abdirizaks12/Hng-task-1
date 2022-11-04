@@ -20,7 +20,7 @@
         width: 88px;
         height: 88px;
         
-        background: url(../assets/profile3.jpg);
+        background: url(../public/profile3.jpg);
         border-radius: 275px;
         background-repeat: no-repeat;
         background-position: center center;
@@ -37,7 +37,7 @@
 
 .share-avatar{
             position:absolute;
-            background:url(../assets/avatar-share-button.png);
+            background:url(../avatar-share-button.png);
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;  
@@ -122,7 +122,7 @@
         }
 
         .share-avatar{
-                background: url(../assets/avatar-share-button2.png);
+                background: url(../avatar-share-button2.png);
                 cursor: pointer;
                 margin-right: 300px;
         }

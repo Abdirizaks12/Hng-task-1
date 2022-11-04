@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 64px 30px 100px;
+    padding: 64px 30px;
     gap: 48px;
     
     
@@ -148,7 +148,7 @@ flex-grow: 1;
     gap: 24px;
     margin-top: 20px;
     width: 343px;
-    height: 512px;
+    /* height: 512px; */
 
 
     /* Inside auto layout */
@@ -320,6 +320,47 @@ margin: 0px;
 padding: 0px;
 
 }
+.sentMessage{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 8px;
+    
+    width: 343px;
+    height: 48px;
+    
+    /* Primary/600 */
+    
+    background: #06e719;
+    /* Primary/600 */
+    
+    border: 1px solid #8eebd3;
+    /* Shadow/xs */
+    
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    
+    /* Inside auto layout */
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    /* Base/White */
+    
+    color: #FFFFFF;
+
+}
 
 @media screen and (min-width:1440px){
        .myContact{
@@ -328,8 +369,8 @@ padding: 0px;
         justify-content: center;
         align-items: center;
         padding: 0px 0px 96px;
-        gap: 94px;
-      margin-top: 0px;
+        gap: 64px;
+      
         width: 1440px;
         /* height: 960px; */
        
@@ -341,13 +382,14 @@ padding: 0px;
        .contact-data{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
+        align-items: center;
+
+        padding: 0px; 
         gap: 48px;
-        margin: 0px;
+         margin: 0px;
 
         width: 720px;
-        height: 616px;
+        /* height: 616px; */
 
 
 /* Inside auto layout */
@@ -411,15 +453,12 @@ padding: 0px;
 gap: 32px;
 
 width: 720px;
-height: 474px;
+/* height: 474px; */
 
 
 /* Inside auto layout */
 
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
+
    }
    .names-data{
     display: flex;

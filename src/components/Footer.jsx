@@ -11,9 +11,9 @@ export default function Footer(){
      </div>
 
      <div className="footer-bottom">
-         <img src="../Zuri-logo.png"/>
+         <img src="./Zuri-Logo.png"/>
          <p>HNG Internship 9 Frontend Task</p>
-         <img src= "../I4G.png"/>
+         <img src= "./I4G.png"/>
      </div>
   </div>)
 }

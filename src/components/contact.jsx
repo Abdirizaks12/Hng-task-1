@@ -8,7 +8,7 @@ export default function Contact(){
     firstName: "",
     lastName: "",
     email: "",
-    comments: "",
+    message: "",
     shareData: false
    })
    const [formErrors , setFormErrors] = React.useState({})
@@ -44,19 +44,22 @@ export default function Contact(){
          errors.lastName ="Last name is required"
       }
       if(!values.email){
-         errors.email ="Email is required"
-      } else if (!regex.test(values.email)){
-         errors.email = "this is not a valid email format"
-      }
+         errors.email ="Email is required"}
+      // else if (!regex.test(values.email)){
+      //    errors.email = "this is not a valid email format"
+      // }
       if(!values.message){
          errors.message ="Message is required"
       }
+
       return errors;
     }
 
     return(
       <div className="myContact">
-
+       {Object.keys(formErrors).length === 0 && isSubmit ? (
+         <div className="sentMessage">Message sent successfully</div>
+       ): ([])}
         <div className="contact-data">
 
          <div className="contact-head">
@@ -118,8 +121,8 @@ export default function Contact(){
                    id="message"
                    placeholder="Send me a message and I'll reply you as soon as possible..." 
                    onChange={handleChange} 
-                   name="comments" 
-                   value={formData.comments} 
+                   name="message" 
+                   value={formData.message} 
                    
                    />
                    <p className="error">{formErrors.message}</p>
@@ -139,8 +142,8 @@ export default function Contact(){
             <button id="btn__submit">Send message</button>
 
           </form>
+         <Footer/>
         </div>
-    <Footer/>
     </div>
     )
 }

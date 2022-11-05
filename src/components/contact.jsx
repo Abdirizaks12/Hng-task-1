@@ -60,6 +60,7 @@ export default function Contact(){
        {Object.keys(formErrors).length === 0 && isSubmit ? (
          <div className="sentMessage">Message sent successfully</div>
        ): ([])}
+       
         <div className="contact-data">
 
          <div className="contact-head">
